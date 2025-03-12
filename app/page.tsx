@@ -169,7 +169,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-white/80 leading-relaxed"
             >
-              At CreativeFlux Enterprises, we build digital solutions that
+              At CyberFlux Enterprises, we build digital solutions that
               empower businesses, creators, and brands across multiple
               industries. Our expertise lies in developing cutting-edge
               websites, applications, fashion-tech solutions, and interactive
