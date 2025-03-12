@@ -52,7 +52,7 @@ export default function Home() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative z-10 text-[#00ffff] font-bold text-xl"
+        className="relative z-50 text-[#00ffff] font-bold text-xl"
       >
         <Navbar />
       </motion.div>
