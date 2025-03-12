@@ -1,9 +1,11 @@
 "use client";
 
+import Crosshair from "@/components/Crosshair";
 import Navbar from "@/components/Navbar";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useRef } from 'react';
 
 const ShootingStar = ({ delay = 0 }) => (
   <motion.div
@@ -29,9 +31,11 @@ export default function Home() {
     setMounted(true);
   }, []);
 
+  const containerRef = useRef(null);
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Half-circle gradient at bottom */}
+      <Crosshair containerRef={containerRef} color='#ffffff'/> 
       <div 
         className="absolute top-[0vh] left-1/2 -translate-x-1/2 w-[1000px] h-[800px] z-0"
         style={{
