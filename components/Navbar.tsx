@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import CustomCursor from "./Cursor"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,6 +22,7 @@ const Navbar = () => {
     <nav
       className={`bg-black md:px-16 text-white fixed w-full z-50 transition-all duration-300 ${scrolled ? "py-2 shadow-lg" : "py-4"}`}
     >
+      <CustomCursor />
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         {/* Left - Hamburger Menu for mobile */}
         <div className="lg:hidden z-50">

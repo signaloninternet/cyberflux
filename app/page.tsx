@@ -1,26 +1,18 @@
 "use client";
 
+import CreativeTeam from "@/components/CreativeTeam";
 import Crosshair from "@/components/Crosshair";
+import CustomCursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
+import Project from "@/components/Projects";
+import MeteorShower from "@/components/Shower";
+import SplashCursor from "@/components/SplashCursor";
+import ShootingStars from "@/components/Stars";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useRef } from 'react';
-
-const ShootingStar = ({ delay = 0 }) => (
-  <motion.div
-    initial={{ x: "-100%", y: "0%", opacity: 0 }}
-    animate={{ x: "200%", y: "100%", opacity: [0, 1, 1, 0] }}
-    transition={{
-      duration: 2,
-      delay,
-      repeat: Infinity,
-      repeatDelay: Math.random() * 5 + 3,
-      ease: "linear",
-    }}
-    className="absolute h-[1px] w-[100px] bg-gradient-to-r from-transparent via-[#00ffff] to-transparent"
-  />
-);
+import { useRef } from "react";
+import AnimatedCursor from "react-animated-cursor";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -34,10 +26,9 @@ export default function Home() {
   const containerRef = useRef(null);
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* Half-circle gradient at bottom */}
-      <Crosshair containerRef={containerRef} color='#ffffff'/> 
-      <div 
-        className="absolute top-[0vh] left-1/2 -translate-x-1/2 w-[1000px] h-[800px] z-0"
+
+      <div
+        className="absolute top-[0vh] md:-top-[40vh] left-1/2 -translate-x-1/2 w-[1000px] md:w-[2000px] h-[800px] md:h-[1000px] z-0"
         style={{
           background: `
             radial-gradient(
@@ -48,7 +39,7 @@ export default function Home() {
               transparent 65%
             )
           `,
-          opacity: 0.6
+          opacity: 0.6,
         }}
       />
 
@@ -62,10 +53,7 @@ export default function Home() {
       </motion.div>
 
       <section className="relative z-10 h-screen flex flex-col justify-center items-center text-center px-4">
-        {mounted &&
-          Array.from({ length: 10 }).map((_, i) => (
-            <ShootingStar key={i} delay={i * 0.5} />
-          ))}
+        <MeteorShower />
 
         <motion.div style={{ opacity }} className="relative z-10">
           <motion.div
@@ -106,82 +94,10 @@ export default function Home() {
             AGENCY
           </motion.div>
         </motion.div>
-
-        {/* Animated Background Lines */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            animate={{
-              rotate: ["-45deg", "-44deg", "-45deg"],
-              scale: [1, 1.02, 1],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute left-0 bottom-0 w-[200%] h-[200%] origin-bottom-left"
-          >
-            {Array.from({ length: 5 }).map((_, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0.1 }}
-                animate={{ opacity: [0.1, 0.3, 0.1] }}
-                transition={{
-                  duration: 2,
-                  delay: i * 0.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute left-0 top-[75%] w-full h-[1px] bg-[#00ffff]/20"
-                style={{ top: `${75 + i * 2}%` }}
-              />
-            ))}
-          </motion.div>
-        </div>
+        
       </section>
-
-      {/* Content Section */}
-      <section className="relative px-4 md:px-16 py-20 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <h2 className="text-xl font-bold">
-                WE'RE A CREATIVE AND
-                <br />
-                TALENTED TEAM OF DESIGNERS
-              </h2>
-              <motion.div
-                animate={{ x: [0, 10, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <ChevronRight className="text-[#00ffff]" size={24} />
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-white/80 leading-relaxed"
-            >
-              At CyberFlux Enterprises, we build digital solutions that
-              empower businesses, creators, and brands across multiple
-              industries. Our expertise lies in developing cutting-edge
-              websites, applications, fashion-tech solutions, and interactive
-              experiences that seamlessly blend technology with creativity.
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <CreativeTeam />
+      <Project />
     </main>
   );
 }
