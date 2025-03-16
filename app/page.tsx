@@ -3,7 +3,10 @@
 import CreativeTeam from "@/components/CreativeTeam";
 import Crosshair from "@/components/Crosshair";
 import CustomCursor from "@/components/Cursor";
+import Footer from "@/components/Footer";
+import ScrollVelocity from "@/components/LetsTalk";
 import Navbar from "@/components/Navbar";
+import OurGoal from "@/components/OurGoal";
 import Project from "@/components/Projects";
 import MeteorShower from "@/components/Shower";
 import SplashCursor from "@/components/SplashCursor";
@@ -26,7 +29,6 @@ export default function Home() {
   const containerRef = useRef(null);
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
-
       <div
         className="absolute top-[0vh] md:-top-[40vh] left-1/2 -translate-x-1/2 w-[1000px] md:w-[2000px] h-[800px] md:h-[1000px] z-0"
         style={{
@@ -94,10 +96,17 @@ export default function Home() {
             AGENCY
           </motion.div>
         </motion.div>
-        
       </section>
       <CreativeTeam />
       <Project />
+      <OurGoal />
+      <ScrollVelocity
+        texts={[
+          ["LET'S TALK", "Get In Touch"],
+          ["LET'S TALK", "Get In Touch"],
+        ]}
+      />
+      <Footer />
     </main>
   );
 }
