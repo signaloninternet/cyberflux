@@ -26,7 +26,7 @@ const Navbar = () => {
       <CustomCursor />
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         {/* Left - Hamburger Menu for mobile */}
-        <div className="lg:hidden absolute top-[90vh] right-8 rounded-full p-2 bg-pink-600 z-50 transition-all duration-300 hover:bg-gray-800 shadow-lg">
+        <div className="lg:hidden absolute top-[80vh] right-8 rounded-full p-2 bg-pink-600 z-50 transition-all duration-300 hover:bg-gray-800 shadow-lg">
           <button
             className="flex justify-center items-center w-10 h-10 focus:outline-none transition-transform duration-300"
             onClick={() => setIsOpen(!isOpen)}
