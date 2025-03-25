@@ -56,7 +56,7 @@ export default function ChangedCursor() {
 
   return (
     <div
-      className="fixed pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-150 ease-out"
+      className="hidden md:flex fixed pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-150 ease-out"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
