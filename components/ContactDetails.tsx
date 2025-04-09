@@ -10,20 +10,11 @@ export default function ContactDetails() {
 
       <div className="space-y-8">
         <div>
-          <h3 className="font-bold">VNIT Nagpur</h3>
+          <h3 className="font-bold">Nagpur</h3>
           <p className="text-gray-600">
-            Visvesvaraya National Institute of Technology Nagpur
+            Nagpur Tech City, Nagpur
             <br />
             Maharashtra, Pin 440010 (India)
-          </p>
-        </div>
-
-        <div>
-          <h3 className="font-bold">Delhi</h3>
-          <p className="text-gray-600">
-            Neelam Chowk Ajronda Metro Station
-            <br />
-            Faridabad, Haryana, Pin 121007 (India)
           </p>
         </div>
 
@@ -33,15 +24,15 @@ export default function ContactDetails() {
           <h2 className="text-2xl font-bold mb-6">Email us</h2>
           <div className="space-y-4">
             <div>
-              <h3 className="font-bold">Lead Frontend Engineer</h3>
+              <h3 className="font-bold">Content Manager</h3>
               <a href="mailto:signalinternet@outlook.com" className="text-[#00E0FF] hover:underline">
-                signalinternet@outlook.com
+                meandwho@outlook.com
               </a>
             </div>
             <div>
               <h3 className="font-bold">Lead Backend Engineer</h3>
               <a href="mailto:satishbanchhere1@gmail.com" className="text-[#00E0FF] hover:underline">
-                satishbanchhere1@gmail.com
+                fafsacyber@gmail.com
               </a>
             </div>
           </div>
