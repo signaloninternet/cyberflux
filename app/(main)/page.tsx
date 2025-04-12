@@ -105,7 +105,6 @@ export default function Home() {
       <ScrollVelocity
         texts={[
           ["LET'S TALK", "Get In Touch"],
-          ["LET'S TALK", "Get In Touch"],
         ]}
       />
       <Footer />

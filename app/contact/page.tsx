@@ -5,6 +5,7 @@ import ContactDetails from "@/components/ContactDetails"
 import ContactForm from "@/components/ContactForm"
 import Container from "@/components/container"
 import Footer from "@/components/Footer"
+import ScrollVelocity from "@/components/LetsTalk"
 import Navbar from "@/components/Navbar"
 import PageIntro from "@/components/page-intro"
 
@@ -22,6 +23,11 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </Container>
+            <ScrollVelocity
+              texts={[
+                ["LET'S TALK", "Get In Touch"],
+              ]}
+            />
       <Footer />
     </div>
   )
