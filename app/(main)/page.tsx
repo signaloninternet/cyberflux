@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
       <div
-        className="absolute top-[0vh] md:-top-[20vh] left-1/2 -translate-x-1/2 w-[1000px] md:w-[2000px] h-[800px] md:h-[1000px] xl:h-[1600px] z-0"
+        className="absolute top-[0vh] md:-top-[70vh] left-1/2 -translate-x-1/2 w-[1000px] md:w-[2000px] h-[800px] md:h-[1000px] xl:h-[1600px] z-0"
         style={{
           background: `
             radial-gradient(
