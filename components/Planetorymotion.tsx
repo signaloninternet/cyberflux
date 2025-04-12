@@ -14,9 +14,9 @@ export default function PlanetaryHero() {
   if (!mounted) return null;
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-black flex items-center">
+    <div className="relative max-w-[2100px] mx-auto w-full min-h-screen overflow-hidden bg-black flex items-center">
       {/* Content Section */}
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:px-8 py-12 relative z-10">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:px-8 py-12 relative z-10">
         <div className="flex flex-col justify-center space-y-6">
           <h2 className="text-white text-xl md:text-2xl font-medium tracking-wide">
             JOIN US IN SHAPING THE FUTURE

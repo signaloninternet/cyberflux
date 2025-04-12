@@ -16,14 +16,14 @@ const CreativeTeam = () => {
     return (
       <>
         {/* Content Section */}
-        <section className="relative px-4 md:px-16 py-20 bg-black overflow-hidden">
+        <section className="relative flex flex-col items-center justify-center px-6 py-20 bg-black overflow-hidden">
           {/* Threads as Background */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <Threads amplitude={1.9} distance={0.9} enableMouseInteraction={true} />
           </div>
   
           {/* Main Content */}
-          <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="relative z-10 max-w-[2000px]">
             <div className="grid md:grid-cols-2 gap-16">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}

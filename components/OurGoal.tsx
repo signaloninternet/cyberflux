@@ -67,7 +67,7 @@ const OurGoal = () => {
   ]
 
   return (
-    <section className="relative z-10 w-full min-h-screen py-12 px-6 md:px-12">
+    <section className="relative z-10 w-full min-h-screen py-12 px-6">
       <div className="absolute inset-0 bg-black">
         <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-cyan-500/20 to-transparent" />
       </div>
@@ -77,7 +77,7 @@ const OurGoal = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="max-w-7xl mx-auto flex lg:flex-row flex-col gap-8 relative z-10"
+        className="flex lg:flex-row flex-col gap-8 relative z-10"
       >
         <motion.div variants={fadeIn("right", "tween", 0.2, 1)} className="flex-[0.95] flex justify-center flex-col">
           <h2 className="text-sm font-medium tracking-widest text-white uppercase mb-4">OUR GOAL</h2>
@@ -97,11 +97,11 @@ const OurGoal = () => {
           </div>
         </motion.div>
 
-        <motion.div variants={planetVariants("right")} className="flex-1 relative h-[300px] md:h-auto">
+        <motion.div variants={planetVariants("right")} className="flex-1 relative h-[300px] md:max-h-[900px]">
           <div className="absolute md:right-20 md:top-20 right-0 top-0 w-16 h-16 md:w-20 md:h-20">
             <Image src="/goal1.svg" alt="Small planet" fill className="object-contain" />
           </div>
-          <div className="absolute md:right-10 md:top-1/3 left-0 bottom-0 md:left-auto md:bottom-auto w-48 h-48 md:w-64 md:h-64">
+          <div className="absolute md:right-10 md:top-1/3 left-0 bottom-0 md:left-auto md:bottom-auto w-48 h-48 md:w-64 md:h-64 xl:w-[600px] xl:h-[600px]">
             <Image src="/goal2.svg" alt="Large planet" fill className="object-contain" />
           </div>
         </motion.div>

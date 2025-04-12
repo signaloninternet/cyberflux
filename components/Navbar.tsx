@@ -21,10 +21,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-black md:px-16 text-white fixed w-full z-50 transition-all duration-300 ${scrolled ? "py-2 shadow-lg" : "py-4"}`}
+      className={`bg-black md:px-2 text-white fixed w-full z-50 transition-all duration-300 ${scrolled ? "py-2 shadow-lg" : "py-4"}`}
     >
       <CustomCursor />
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
+      <div className="max-w-[2000px] flex justify-between items-center px-4">
         {/* Left - Hamburger Menu for mobile */}
         <div className="lg:hidden absolute top-[80vh] right-8 rounded-full p-2 bg-pink-600 z-50 transition-all duration-300 hover:bg-gray-800 shadow-lg">
           <button
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation Links - Left Side */}
-        <ul className="hidden lg:flex space-x-6 uppercase text-sm">
+        <ul className="hidden lg:flex gap-4 uppercase text-sm">
           <li>
             <Link href="/" className="hover:text-cyan-400 transition-colors duration-300">
               Home

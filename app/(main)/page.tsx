@@ -7,7 +7,9 @@ import Footer from "@/components/Footer";
 import ScrollVelocity from "@/components/LetsTalk";
 import Navbar from "@/components/Navbar";
 import OurGoal from "@/components/OurGoal";
+import ProjectCard from "@/components/Projects";
 import Project from "@/components/Projects";
+import ProjectShowcase from "@/components/ProjectShowcase";
 import MeteorShower from "@/components/Shower";
 import SplashCursor from "@/components/SplashCursor";
 import ShootingStars from "@/components/Stars";
@@ -54,7 +56,7 @@ export default function Home() {
         <Navbar />
       </motion.div>
 
-      <section className="relative z-10 h-[100vh] max-h-[1000px] flex flex-col justify-center items-center text-center px-4">
+      <section className="relative  z-10 h-[100vh] max-h-[1000px] flex flex-col justify-center items-center text-center px-4">
         <MeteorShower />
 
         <motion.div style={{ opacity }} className="relative z-10">
@@ -98,7 +100,7 @@ export default function Home() {
         </motion.div>
       </section>
       <CreativeTeam />
-      <Project />
+      <ProjectShowcase />
       <OurGoal />
       <ScrollVelocity
         texts={[

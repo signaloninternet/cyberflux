@@ -23,8 +23,8 @@ const CompanyRight: React.FC<CompanyShowcaseProps> = ({
   projectLink,
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-start max-w-6xl xxl:max-w-7xl mx-auto p-5 gap-10">
-      <div className="w-full lg:w-[40%] flex flex-col gap-5">
+    <div className="flex flex-col lg:flex-row justify-between items-start max-w-6xl lg:max-w-[2100px] mx-auto p-6  gap-10">
+      <div className="w-full lg:w-[40%] flex flex-col gap-5 xl:mt-6">
       <h2 className="text-2xl font-bold uppercase text-white">{headline}</h2>
         <p className="text-base leading-relaxed text-gray-400">{description}</p>
         <p className="text-sm leading-relaxed text-[#00E0FF]">

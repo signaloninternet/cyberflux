@@ -55,18 +55,18 @@ export default function Project() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f7f7f7] dark:bg-[#1a1a1a] overflow-hidden p-4">
-      <div className="max-w-[1400px] mx-auto">
+    <main className="min-h-screen bg-black text-white overflow-hidden p-4">
+      <div className="max-w-[2000px] mx-auto">
         {/* Japanese-style Header */}
         <div className="mb-16 mt-8 flex flex-col md:flex-row justify-between">
           <div className="flex items-start gap-4 flex-col">
             <div className="flex items-center space-x-2 mb-2">
               <Circle className="w-3 h-3 text-[#FF073A]" fill="currentColor" />
-              <h1 className="text-sm tracking-[0.2em] uppercase text-black">
-                プロジェクト
+              <h1 className="text-sm tracking-[0.2em] uppercase ">
+                Our Projects
               </h1>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold  tracking-tight">
               Projects
             </h2>
             <Link  href="/projects" className="group flex items-center gap-1.5 bg-white hover:bg-[#FF0066] text-[#FF0066] hover:text-white text-sm font-medium py-1 px-2.5 rounded-full transition-all duration-300 border border-[#FF0066]">
@@ -76,7 +76,7 @@ export default function Project() {
               </div>
             </Link>
           </div>
-          <div className="w-full text-black md:w-1/2 mt-4 md:mt-0">
+          <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <p className="text-sm tracking-[0.2em] uppercase">
               With a strong focus on innovation and user-centric design, we are
               dedicated to transforming industries, streamlining workflows, and

@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body >
+      <body className='bg-black max-w-[2100px] mx-auto' >
       <CustomCursor />
         {children}</body>
     </html>
