@@ -31,7 +31,7 @@ const MeteorShower: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 w-full h-[100vh] overflow-hidden pointer-events-none">
       {[...Array(5)].map((_, index) => (
         <div
           key={index}

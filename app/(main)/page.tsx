@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
       <div
-        className="absolute top-[0vh] md:-top-[40vh] left-1/2 -translate-x-1/2 w-[1000px] md:w-[2000px] h-[800px] md:h-[1000px] z-0"
+        className="absolute top-[0vh] md:-top-[40vh] left-1/2 -translate-x-1/2 w-[1000px] md:w-[2000px] h-[800px] md:h-[1000px] lg:h-[1600px] z-0"
         style={{
           background: `
             radial-gradient(
@@ -54,7 +54,7 @@ export default function Home() {
         <Navbar />
       </motion.div>
 
-      <section className="relative z-10 h-screen flex flex-col justify-center items-center text-center px-4">
+      <section className="relative z-10 h-[100vh] max-h-[1000px] flex flex-col justify-center items-center text-center px-4">
         <MeteorShower />
 
         <motion.div style={{ opacity }} className="relative z-10">
