@@ -10,7 +10,7 @@ interface CompanyShowcaseProps {
   headline: string;
   description: string;
   shortDescription: string;
-  projectLink?: string; // ✅ Use string type for URL
+  projectLink?: string; 
 }
 
 const CompanyRight: React.FC<CompanyShowcaseProps> = ({
@@ -25,24 +25,24 @@ const CompanyRight: React.FC<CompanyShowcaseProps> = ({
   return (
     <div className="flex flex-col lg:flex-row justify-between items-start max-w-6xl xxl:max-w-7xl mx-auto p-5 gap-10">
       <div className="w-full lg:w-[40%] flex flex-col gap-5">
-        <h2 className="text-2xl font-bold uppercase text-gray-800">
-          {headline}
-        </h2>
-        <p className="text-base leading-relaxed text-gray-600">{description}</p>
-        <p className="text-sm leading-relaxed text-pink-600">
+      <h2 className="text-2xl font-bold uppercase text-white">{headline}</h2>
+        <p className="text-base leading-relaxed text-gray-400">{description}</p>
+        <p className="text-sm leading-relaxed text-[#00E0FF]">
           {shortDescription}
         </p>
 
         {projectLink && (
-          <Link 
-            href={projectLink} 
-            className="group max-w-[177px] flex items-center gap-1.5 bg-white hover:bg-[#FF0066] text-[#FF0066] hover:text-white text-sm font-medium py-1 px-2.5 rounded-full transition-all duration-300 border border-[#FF0066]"
-          >
-            <span>LINK TO PROJECT</span>
-            <div className="bg-[#FF0066] group-hover:bg-white rounded-full p-1.5 transition-colors duration-300">
-              <ArrowUpRight className="w-3.5 h-3.5 text-white group-hover:text-[#FF0066]" />
-            </div>
-          </Link>
+          <Link
+          href={projectLink}
+          className="group flex hover:bg-[#00e0ff] items-center justify-between w-[250px] h-[50px] border-2 border-[#00E0FF] rounded-full p-2 transition-all duration-300"
+        >
+          <span className="text-[#00E0FF] pl-2 group-hover:text-black text-sm font-semibold tracking-wide">
+            ENTER YOUR EMAIL
+          </span>
+          <div className="w-8 h-8 flex items-center justify-center bg-[#00E0FF] rounded-full transition-colors duration-300 group-hover:bg-black">
+            <ArrowUpRight className="w-5 h-5 text-black group-hover:text-[#00E0FF]" />
+          </div>
+        </Link>
         )}
       </div>
 
@@ -58,7 +58,7 @@ const CompanyRight: React.FC<CompanyShowcaseProps> = ({
           />
         </div>
 
-        <div className="flex justify-between text-sm text-gray-600 mt-3">
+        <div className="flex justify-between text-sm text-gray-400 mt-3">
           <span className="font-bold">© {yearIncorporated}</span>
           <span className="uppercase font-bold">{companyName}</span>
         </div>

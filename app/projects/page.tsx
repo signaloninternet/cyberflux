@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import CompanyRight from "@/components/ProjectsRight";
 import ScrollVelocity from "@/components/LetsTalk";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Page = () => {
   const showcaseVariants = {
@@ -15,9 +16,9 @@ const Page = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-black">
       <div className="fixed top-0 left-0 w-full z-30">
-        <ChangedNavbar />
+        <Navbar />
       </div>
 
       <div className="pt-[80px] space-y-16">
