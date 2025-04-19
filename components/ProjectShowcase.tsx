@@ -72,8 +72,8 @@ const ProjectShowcase: React.FC = () => {
               </div>
             </a>
           </div>
-          <div className="w-full md:pl-4 md:w-1/2 mt-4 md:mt-0">
-            <p className="text-lg  font-manrope lg:text-2xl 2xl:text-3xl">
+          <div className="w-full md:pl-8 md:w-1/2 mt-4 md:mt-0">
+            <p className=" text-md  font-manrope lg:text-lg 2xl:text-xl leading-relaxed">
               With a strong focus on innovation and user-centric design, we are
               dedicated to transforming industries, streamlining workflows, and
               delivering impactful digital products that redefine user

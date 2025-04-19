@@ -49,7 +49,7 @@ const CreativeTeam = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-white/80 font-manrope text-lg lg:text-2xl 2xl:text-3xl leading-relaxed"
+                className="text-white/80 text-md  font-manrope lg:text-lg 2xl:text-xl leading-relaxed"
               >
                 At CyberFlux Enterprises, we build digital solutions that empower
                 businesses, creators, and brands across multiple industries. Our
