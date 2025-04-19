@@ -95,7 +95,7 @@ const OurGoal = () => {
           <h2 className="text-lg lg:text-2xl 2xl:text-3xl font-manrope font-bold tracking-widest text-white uppercase mb-4">
             OUR GOAL
           </h2>
-          <p className="text-lg  font-manrope lg:text-2xl 2xl:text-3xl text-gray-300 mb-8 md:mb-10 max-w-xl z-50">
+          <p className="text-lg  font-manrope lg:text-xl 2xl:text-2xl text-gray-300 mb-8 md:mb-10 max-w-xl z-50">
             Our mission is to bridge the gap between creativity and technology
             by developing intuitive, scalable, and high-impact digital
             solutions.
@@ -112,7 +112,7 @@ const OurGoal = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-lg  font-manrope lg:text-2xl 2xl:text-3xl text-white">
+                <p className="text-lg  font-manrope lg:text-xl 2xl:text-2xl text-white">
                   {feature.title}
                 </p>
               </div>
