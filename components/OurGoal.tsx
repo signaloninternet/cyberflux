@@ -132,7 +132,7 @@ const OurGoal = () => {
               className="object-contain opacity-30 md:opacity-100"
             />
           </div>
-          <div className="absolute left-0 bottom-0 md:left-auto md:bottom-auto md:right-10 md:top-1/3 w-48 h-48 md:w-64 md:h-64 xl:w-[600px] xl:h-[600px]">
+          <div className="absolute left-0 bottom-24 md:left-auto md:right-10 w-48 h-48 md:w-64 md:h-64 xl:w-[600px] xl:h-[600px]">
             <Image
               src="/goal2.svg"
               alt="Large planet"
