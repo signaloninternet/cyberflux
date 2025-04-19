@@ -15,14 +15,11 @@ import Threads from "./Threads";
 const CreativeTeam = () => {
     return (
       <>
-        {/* Content Section */}
         <section className="relative flex flex-col items-center justify-center px-6 py-20 bg-black overflow-hidden">
-          {/* Threads as Background */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <Threads amplitude={1.9} distance={0.9} enableMouseInteraction={true} />
           </div>
-  
-          {/* Main Content */}
+
           <div className="relative z-10 max-w-[2000px]">
             <div className="grid md:grid-cols-2 gap-16">
               <motion.div
@@ -33,7 +30,7 @@ const CreativeTeam = () => {
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                <h2 className="text-xl font-bold">
+                <h2 className="text-lg lg:text-2xl 2xl:text-3xl font-manrope font-bold">
                   WE'RE A CREATIVE AND
                   <br />
                   TALENTED TEAM OF DESIGNERS
@@ -52,7 +49,7 @@ const CreativeTeam = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-white/80 leading-relaxed"
+                className="text-white/80 font-manrope text-lg lg:text-2xl 2xl:text-3xl leading-relaxed"
               >
                 At CyberFlux Enterprises, we build digital solutions that empower
                 businesses, creators, and brands across multiple industries. Our

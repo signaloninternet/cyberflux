@@ -69,7 +69,10 @@ export default function Project() {
             <h2 className="text-4xl md:text-5xl font-bold  tracking-tight">
               Projects
             </h2>
-            <Link  href="/projects" className="group flex items-center gap-1.5 bg-white hover:bg-[#FF0066] text-[#FF0066] hover:text-white text-sm font-medium py-1 px-2.5 rounded-full transition-all duration-300 border border-[#FF0066]">
+            <Link
+              href="/projects"
+              className="group flex items-center gap-1.5 bg-white hover:bg-[#FF0066] text-[#FF0066] hover:text-white text-sm font-medium py-1 px-2.5 rounded-full transition-all duration-300 border border-[#FF0066]"
+            >
               <span>ALL PROJECTS</span>
               <div className="bg-[#FF0066] group-hover:bg-white rounded-full p-1.5 transition-colors duration-300">
                 <ArrowUpRight className="w-3.5 h-3.5 text-white group-hover:text-[#FF0066]" />

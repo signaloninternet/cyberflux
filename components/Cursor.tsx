@@ -5,9 +5,9 @@ import { ArrowUpRight } from "lucide-react"
 
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [isHovering, setIsHovering] = useState(false)
+  const [isHoveringImage, setIsHoveringImage] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-  const [cursorColor, setCursorColor] = useState("bg-white") // Default white color
+  const [cursorColor, setCursorColor] = useState("bg-white")
 
   useEffect(() => {
     const updatePosition = (e: MouseEvent) => {
@@ -17,23 +17,21 @@ export default function CustomCursor() {
 
     const detectBackgroundColor = () => {
       const bodyBgColor = window.getComputedStyle(document.body).backgroundColor
-      const isWhiteBg = bodyBgColor === "rgb(255, 255, 255)" // Check for white page
-      setCursorColor(isWhiteBg ? "bg-pink-400" : "bg-white") // Change cursor color accordingly
+      const isWhiteBg = bodyBgColor === "rgb(255, 255, 255)"
+      setCursorColor(isWhiteBg ? "bg-pink-400" : "bg-white")
     }
 
-    const addHoverListeners = () => {
-      const interactiveElements = document.querySelectorAll(
-        'a, button, [role="button"], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-      )
+    const handleMouseEnter = () => setIsVisible(true)
+    const handleMouseLeave = () => setIsVisible(false)
 
-      interactiveElements.forEach((el) => {
-        el.addEventListener("mouseenter", () => setIsHovering(true))
-        el.addEventListener("mouseleave", () => setIsHovering(false))
+    // Only track hover for elements with the class "custom-cursor-target"
+    const addImageHoverListeners = () => {
+      const imageElements = document.querySelectorAll(".custom-cursor-target")
+      imageElements.forEach((el) => {
+        el.addEventListener("mouseenter", () => setIsHoveringImage(true))
+        el.addEventListener("mouseleave", () => setIsHoveringImage(false))
       })
     }
-
-    const handleMouseLeave = () => setIsVisible(false)
-    const handleMouseEnter = () => setIsVisible(true)
 
     window.addEventListener("mousemove", updatePosition)
     window.addEventListener("mouseleave", handleMouseLeave)
@@ -41,7 +39,7 @@ export default function CustomCursor() {
     window.addEventListener("load", detectBackgroundColor)
     window.addEventListener("resize", detectBackgroundColor)
 
-    const timeout = setTimeout(addHoverListeners, 500)
+    const timeout = setTimeout(addImageHoverListeners, 300)
 
     return () => {
       window.removeEventListener("mousemove", updatePosition)
@@ -53,7 +51,7 @@ export default function CustomCursor() {
     }
   }, [isVisible])
 
-  if (!isVisible) return null
+  if (!isVisible || !isHoveringImage) return null
 
   return (
     <div
@@ -64,16 +62,9 @@ export default function CustomCursor() {
       }}
     >
       <div
-        className={`relative flex items-center justify-center rounded-full transition-all duration-150 ease-out ${cursorColor} ${
-          isHovering ? "w-16 h-16" : "w-8 h-8"
-        }`}
+        className={`relative flex items-center justify-center rounded-full transition-all duration-150 ease-out ${cursorColor} w-12 h-12`}
       >
-        <ArrowUpRight
-          className={`transition-all duration-150 text-pink-600 m-4 ${
-            isHovering ? "w-12 h-12" : "w-0 h-0"
-          }`}
-          strokeWidth={3}
-        />
+        <ArrowUpRight className="text-pink-600 w-6 h-6" strokeWidth={3} />
       </div>
     </div>
   )

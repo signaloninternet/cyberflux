@@ -41,26 +41,34 @@ const CompanyShowcase: React.FC<CompanyShowcaseProps> = ({
           <span className="uppercase font-bold">{companyName}</span>
         </div>
       </div>
-      <div className="w-full lg:w-[40%] xl:mt-6 flex flex-col gap-5">
-        <h2 className="text-2xl font-bold uppercase text-white">{headline}</h2>
-        <p className="text-base leading-relaxed text-gray-400">{description}</p>
-        <p className="text-sm leading-relaxed text-[#00E0FF]">
-          {shortDescription}
-        </p>
+      <div className="w-full lg:w-[40%] md:h-96 xl:mt-6 flex gap-4 md:gap-6 flex-col justify-between">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <h2 className="text-lg lg:text-2xl 2xl:text-3xl font-manrope font-bold uppercase text-white">
+            {headline}
+          </h2>
+          <p className="text-sm  font-manrope lg:text-md 2xl:text-lg leading-relaxed text-gray-400">
+            {description}
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 md:gap-6">
+          <p className="text-sm  font-manrope lg:text-md 2xl:text-lg leading-relaxed text-[#00E0FF]">
+            {shortDescription}
+          </p>
 
-        {projectLink && (
-          <Link
-            href={projectLink}
-            className="group flex hover:bg-[#00e0ff] items-center justify-between w-[250px] h-[50px] border-2 border-[#00E0FF] rounded-full p-2 transition-all duration-300"
-          >
-            <span className="text-[#00E0FF] pl-2 group-hover:text-black text-sm font-semibold tracking-wide">
-              ENTER YOUR EMAIL
-            </span>
-            <div className="w-8 h-8 flex items-center justify-center bg-[#00E0FF] rounded-full transition-colors duration-300 group-hover:bg-black">
-              <ArrowUpRight className="w-5 h-5 text-black group-hover:text-[#00E0FF]" />
-            </div>
-          </Link>
-        )}
+          {projectLink && (
+            <Link
+              href={projectLink}
+              className="group flex hover:bg-[#00e0ff] items-center justify-between w-[250px] h-[50px] border-2 border-[#00E0FF] rounded-full p-2 transition-all duration-300"
+            >
+              <span className="text-[#00E0FF] pl-2 group-hover:text-black text-sm font-semibold tracking-wide">
+                ENTER YOUR EMAIL
+              </span>
+              <div className="w-8 h-8 flex items-center justify-center bg-[#00E0FF] rounded-full transition-colors duration-300 group-hover:bg-black">
+                <ArrowUpRight className="w-5 h-5 text-black group-hover:text-[#00E0FF]" />
+              </div>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

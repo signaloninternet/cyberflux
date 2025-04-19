@@ -59,7 +59,7 @@ export default function Home() {
       <section className="relative  z-10 h-[100vh] max-h-[1000px] flex flex-col justify-center items-center text-center px-4">
         <MeteorShower />
 
-        <motion.div style={{ opacity }} className="relative z-10">
+        <motion.div style={{ opacity }} className="relative font-manrope z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold mb-2"
+            className="text-4xl md:text-6xl font-montserrat font-extrabold mb-2"
           >
             WE ARE A
           </motion.h1>
@@ -83,7 +83,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-4xl md:text-6xl font-bold mb-2 text-[#00ffff]"
+            className="text-3xl md:text-6xl font-montserrat font-extrabold mb-2 text-[#00ffff]"
           >
             CREATIVE TECH
           </motion.div>
@@ -93,7 +93,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-[#00ffff]"
+            className="text-3xl md:text-6xl font-montserrat font-extrabold text-[#00ffff]"
           >
             AGENCY
           </motion.div>
